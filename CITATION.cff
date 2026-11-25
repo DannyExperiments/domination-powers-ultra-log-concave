@@ -1,8 +1,13 @@
 cff-version: 1.2.0
-message: "If you use this work, please cite it as below."
+message: "If you use this research release, cite it using the metadata below."
 title: "Ultra log-concavity of the domination polynomials of powers of paths and cycles"
-version: "1.0.0-candidate"
+type: software
+version: 1.0.0
+repository-code: "https://github.com/DannyExperiments/domination-powers-ultra-log-concave"
 authors:
   - name: "DannyExperiments"
-repository-code: "https://github.com/DannyExperiments/domination-powers-ultra-log-concave"
-keywords: [domination polynomial, ultra log-concavity, graph powers, compositions]
+keywords:
+  - domination polynomial
+  - ultra log-concavity
+  - graph powers
+  - bounded compositions

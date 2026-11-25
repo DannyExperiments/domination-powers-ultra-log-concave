@@ -1,33 +1,45 @@
 # Manifest
-- .github/workflows/pdf.yml
-- .github/workflows/verify.yml
-- AI_DISCLOSURE.md
-- CITATION.cff
-- CLAIMS_EVIDENCE_MATRIX.md
-- CONTRIBUTING.md
-- LICENSE_STATUS.md
-- PROBLEM_AND_PROOF.md
-- PROVENANCE.md
-- README.md
-- REPRODUCIBILITY.md
-- SECURITY.md
-- STATUS.md
-- audits/README.md
-- audits/public_safe_reports/summary.md
-- formalization/README.md
-- paper/BUILD.md
-- paper/CHANGELOG_FROM_CANONICAL_PROOF.md
-- paper/CLAIM_SCOPE_AND_LIMITATIONS.md
-- paper/SOURCE_TO_MANUSCRIPT_COMPARISON.md
-- paper/manuscript.pdf
-- paper/manuscript.tex
-- release/EVIDENCE_BUNDLE.zip
-- release/RELEASE_NOTES.md
-- verification/README.md
-- verification/logs/exact_logconcavity.log
-- verification/logs/intermediate_claims.log
-- verification/logs/positive_control.log
-- verification/src/exact_logconcavity.py
-- verification/src/intermediate_claims.py
-- verification/src/positive_control.py
-- MANIFEST.md, SHA256SUMS.txt
+
+Every tracked file except `SHA256SUMS.txt` (which hashes all of them).
+
+- `.gitattributes`
+- `.github/workflows/pdf.yml`
+- `.github/workflows/replay.yml`
+- `.github/workflows/verify.yml`
+- `.gitignore`
+- `AI_DISCLOSURE.md`
+- `CITATION.cff`
+- `CLAIMS_EVIDENCE_MATRIX.md`
+- `CLAIM_SCOPE_AND_LIMITATIONS.md`
+- `CONTRIBUTING.md`
+- `LICENSE_STATUS.md`
+- `MANIFEST.md`
+- `PROVENANCE.md`
+- `README.md` — Overview
+- `REPRODUCIBILITY.md`
+- `SECURITY.md`
+- `STATUS.md`
+- `audits/public_safe_reports/LITERATURE_PRIORITY_AUDIT_2026-11-26.md`
+- `audits/public_safe_reports/MATHEMATICAL_AUDIT.md`
+- `paper/BUILD.md`
+- `paper/manuscript.pdf` — Manuscript (PDF)
+- `paper/manuscript.tex` — Manuscript source
+- `paper/references.bib`
+- `proof/PROBLEM_AND_PROOF.md`
+- `release/EVIDENCE_BUNDLE.sha256`
+- `release/EVIDENCE_BUNDLE.zip`
+- `release/HUMAN_RELEASE_CHECKLIST.md`
+- `release/README.md`
+- `scripts/replay.py`
+- `scripts/verify_repository.py`
+- `verification/README.md`
+- `verification/logs/exact_logconcavity.log`
+- `verification/logs/intermediate_claims.log`
+- `verification/logs/positive_control.log`
+- `verification/src/exact_logconcavity.py`
+- `verification/src/intermediate_claims.py`
+- `verification/src/positive_control.py`
+- `visualization/README.md`
+- `visualization/domination-explorer.zip` — Offline interactive explorer
+- `visualization/domination.gif` — Rotating 3D figure
+- `visualization/index.html`

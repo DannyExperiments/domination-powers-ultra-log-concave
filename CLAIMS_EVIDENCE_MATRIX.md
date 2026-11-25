@@ -1,9 +1,10 @@
 # Claims–evidence matrix
+
 | Claim | Evidence | Load-bearing? |
 |---|---|---|
-| Conjecture 1.8 holds (Thm 1.2) | Proof, paper §§2–5; 3 audits | Proof |
-| Lemma 2.3 comparison | Proof; 50,000 random trials (lane 3) | Proof (computation corroborates) |
-| Cycle/path reductions | Proof; brute force n ≤ 15 (lane 3) | Proof |
-| Exact LC for n ≤ 90, ℓ ≤ 11 | `verification/` | Corroborating |
-| Checker detects failures (star K_{1,4}) | `verification/logs/positive_control.log` | Corroborating |
-| Priority | Literature lanes; Zheng–Qin flag | Unresolved |
+| Ultra log-concavity for P_n^ℓ and C_n^ℓ (Theorem 1.2) | Proof, paper §§2–5; `audits/public_safe_reports/MATHEMATICAL_AUDIT.md` | Proof |
+| Comparison lemma (Lemma 2.3) | Proof; 50,000 random trials (audit lane 3) | Proof (computation corroborates) |
+| Cycle and path reductions | Proof; brute force n ≤ 15 (audit lane 3) | Proof |
+| Exact check n ≤ 90, ℓ ≤ 11 | `verification/` | Corroborating |
+| Checker detects failures | `verification/logs/positive_control.log` | Corroborating |
+| Priority: earlier Zheng–Qin claim | Published Galvin–Zhang, §1 and ref. [18] | Literature |
