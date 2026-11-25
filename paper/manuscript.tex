@@ -1,0 +1,190 @@
+\documentclass[11pt,a4paper]{amsart}
+\usepackage[margin=1in]{geometry}
+\usepackage{amssymb}
+\usepackage[hidelinks]{hyperref}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+
+\newcommand{\one}{\mathbf 1}
+\newcommand{\Prob}{\mathbb P}
+
+\title{Ultra log-concavity of the domination polynomials of powers of paths and cycles}
+
+\begin{document}
+
+\begin{abstract}
+For a graph $H$ on $n$ vertices let $\gamma_k(H)$ be the number of dominating sets of $H$ of size $k$.
+Galvin and Zhang conjectured that for every $n\ge 0$ and $\ell\ge 1$ the sequences $\gamma_k(P_n^\ell)/\binom nk$ and $\gamma_k(C_n^\ell)/\binom nk$ are log-concave, where $G^\ell$ denotes the $\ell$-th power of $G$.
+We prove this conjecture.
+The ratio of consecutive terms is the probability that a dominating set of size $k$ remains dominating after a uniformly random member is deleted, and we show that this probability is nondecreasing in $k$.
+The proof writes dominating sets as compositions with bounded parts and compares sums of two parts by a likelihood-ratio argument for log-concave sequences.
+\end{abstract}
+
+\maketitle
+
+\section{Introduction}
+
+A set $S$ of vertices of a graph $H$ is \emph{dominating} if every vertex of $H$ lies in $S$ or is adjacent to a vertex of $S$. Let $\gamma_k(H)$ denote the number of dominating sets of size $k$. Alikhani and Peng conjectured that $(\gamma_k(H))_k$ is unimodal for every graph $H$ \cite{AP}; this is open in general, and the sequence need not be log-concave \cite{BB}. Beaton and Brown proved unimodality for paths and cycles \cite{BB}, and Galvin and Zhang extended this to all powers of paths and cycles \cite[Theorem~1.4]{GZ}. Here $G^\ell$ is the graph on $V(G)$ in which distinct vertices are adjacent when their distance in $G$ is at most $\ell$, and $P_n$ and $C_n$ are the path and the cycle on $n$ vertices.
+
+A sequence $(a_k)_{k=0}^n$ of nonnegative reals is \emph{log-concave} if $a_k^2\ge a_{k-1}a_{k+1}$ for $1\le k\le n-1$, and \emph{ultra log-concave} if $(a_k/\binom nk)_{k=0}^n$ is log-concave. Galvin and Zhang observed that the domination sequences of powers of paths and cycles appear to be log-concave, verified this and the stronger property below for all $n,\ell\le 500$, and made the following conjecture \cite[Conjecture~1.8]{GZ}.
+
+\begin{conjecture}[Galvin--Zhang]\label{conj}
+For all $n\ge 0$ and $\ell\ge 1$, both $(\gamma_k(P_n^\ell))_{k\ge0}$ and $(\gamma_k(C_n^\ell))_{k\ge0}$ are ultra log-concave.
+\end{conjecture}
+
+We prove the conjecture.
+
+\begin{theorem}\label{thm:main}
+Let $n\ge 0$, $\ell\ge 1$ and $G\in\{P_n,C_n\}$, and put $q_k=\gamma_k(G^\ell)/\binom nk$ for $0\le k\le n$. Then $q_k^2\ge q_{k-1}q_{k+1}$ for $1\le k\le n-1$.
+\end{theorem}
+
+Since $\binom nk^2\ge\binom n{k-1}\binom n{k+1}$, ultra log-concavity implies log-concavity, so Theorem~\ref{thm:main} also shows that the domination sequences of all powers of paths and cycles are log-concave.
+
+For $n\le 2\ell+1$ the graph $C_n^\ell$ is the complete graph $K_n$; we use this as the meaning of $C_n^\ell$ for $n\in\{1,2\}$, and the empty graph for $n=0$. For complete graphs $q=(0,1,\dots,1)$ when $n\ge1$, which is log-concave, and the arguments below also cover these cases directly. Throughout, $r=2\ell+1$, and $q_k$ is the probability that a uniformly random $k$-subset of $V(G)$ is dominating in $G^\ell$.
+
+\section{Log-concave sequences}
+
+All sequences are integer-indexed, nonnegative and finitely supported, and are extended by zero. Call such a sequence $a$ \emph{proper} if it is not identically zero, its support is an interval of integers, and $a(m)^2\ge a(m-1)a(m+1)$ for all $m$. For integers $\alpha\le\beta$ let $\one_{[\alpha,\beta]}$ be the indicator sequence of $\{\alpha,\dots,\beta\}$, and let $*$ denote convolution, $(a*b)(m)=\sum_j a(j)b(m-j)$. The empty convolution is the unit mass at $0$.
+
+\begin{lemma}\label{lem:inward}
+Let $a$ be proper and let $p\le u\le v\le s$ be integers with $p+s=u+v$. Then $a(u)a(v)\ge a(p)a(s)$.
+\end{lemma}
+
+\begin{proof}
+If $a(p)a(s)=0$ there is nothing to prove. Otherwise $p,s$ and every integer between them lie in the support, and the ratios $\rho_j=a(j+1)/a(j)$, $p\le j<s$, are positive and nonincreasing in $j$. Then $a(u)/a(p)=\prod_{j=p}^{u-1}\rho_j$ and $a(s)/a(v)=\prod_{j=v}^{s-1}\rho_j$ have the same number $u-p=s-v$ of factors, and the $t$-th factor of the first product has index $p+t-1\le v+t-1$, so $a(u)/a(p)\ge a(s)/a(v)$.
+\end{proof}
+
+\begin{lemma}\label{lem:conv}
+If $a$ and $b$ are proper, then $a*b$ is proper. In particular every convolution of finitely many indicators $\one_{[\alpha,\beta]}$ is proper.
+\end{lemma}
+
+\begin{proof}
+This is classical \cite{Hoggar,Karlin,Stanley}; we include the short proof. The support of $a*b$ is the sum of two integer intervals, hence an interval, and $a*b\ne0$. For a sequence $c$ let $M_c$ be the matrix $M_c(i,j)=c(j-i)$, indexed by $\mathbb Z\times\mathbb Z$. If $c$ is proper, every $2\times2$ minor of $M_c$ with rows $i_1<i_2$ and columns $j_1<j_2$ equals $c(j_1-i_1)c(j_2-i_2)-c(j_2-i_1)c(j_1-i_2)$, which is nonnegative by Lemma~\ref{lem:inward}, since $j_1-i_2\le j_1-i_1,\ j_2-i_2\le j_2-i_1$ and the two sums agree. Now $M_{a*b}=M_aM_b$, where each entry is a finite sum, and the Cauchy--Binet formula, applied with the summation index restricted to a finite set containing all nonzero terms of the relevant entries, expresses each $2\times2$ minor of $M_{a*b}$ as a sum of products of $2\times2$ minors of $M_a$ and $M_b$. Hence all $2\times 2$ minors of $M_{a*b}$ are nonnegative; the minor with rows $0,1$ and columns $m,m+1$ is $(a*b)(m)^2-(a*b)(m-1)(a*b)(m+1)$.
+\end{proof}
+
+The next lemma is the comparison used throughout: adding one more summand with values in $[1,r]$ to a remainder makes a fixed pair of coordinates stochastically smaller, given the total. Its first part says that a proper sequence is smaller than its convolution with $\one_{[1,r]}$ in the likelihood-ratio order, and its second part is the implication from the likelihood-ratio order to the usual stochastic order; both are standard \cite{Karlin,SS}. When $w$ is itself proper, as in all our applications, the conclusion also follows from Efron's monotonicity theorem for conditional distributions given a sum \cite{Efron} after conditioning on the added summand. We include the short self-contained proof.
+
+\begin{lemma}\label{lem:compare}
+Let $a$ be proper, $r\ge 1$ and $b=a*\one_{[1,r]}$. Then $a(u)b(v)\ge b(u)a(v)$ for all integers $u\le v$. Consequently, if $w$ is a nonnegative finitely supported sequence, $T$ an integer, and
+\[
+P(s)=w(s)\,a(T-s),\qquad P'(s)=w(s)\,b(T-s)
+\]
+have positive totals $Z=\sum_sP(s)$ and $Z'=\sum_sP'(s)$, then for every integer $h$,
+\[
+\frac1{Z'}\sum_{s\le h}P'(s)\ \ge\ \frac1Z\sum_{s\le h}P(s).
+\]
+\end{lemma}
+
+\begin{proof}
+Let $1\le i\le r$. Both $u$ and $v-i$ lie between $u-i$ and $v$, and $(u-i)+v=u+(v-i)$, so Lemma~\ref{lem:inward} gives $a(u)a(v-i)\ge a(u-i)a(v)$. Summing over $i$ gives $a(u)b(v)\ge b(u)a(v)$.
+
+For $s<t$ put $u=T-t<v=T-s$; then $P'(s)P(t)=w(s)w(t)b(v)a(u)\ge w(s)w(t)a(v)b(u)=P(s)P'(t)$. Summing over all $s\le h<t$ gives
+\[
+\Bigl(\sum_{s\le h}P'(s)\Bigr)\Bigl(\sum_{t>h}P(t)\Bigr)\ge\Bigl(\sum_{s\le h}P(s)\Bigr)\Bigl(\sum_{t>h}P'(t)\Bigr).
+\]
+Adding $\bigl(\sum_{s\le h}P'(s)\bigr)\bigl(\sum_{s\le h}P(s)\bigr)$ to both sides gives $Z\sum_{s\le h}P'(s)\ge Z'\sum_{s\le h}P(s)$.
+\end{proof}
+
+\section{The deletion probability}
+
+Let $1\le k\le n$ with $q_k>0$. Choose a $k$-subset $S$ of $V(G)$ uniformly at random and then a uniformly random $x\in S$. The set $S\setminus\{x\}$ is a uniformly random $(k-1)$-subset, and if it is dominating then so is $S$. Hence
+\[
+R_k:=\Prob\bigl(S\setminus\{x\}\text{ dominating}\mid S\text{ dominating}\bigr)=\frac{q_{k-1}}{q_k}.
+\]
+Every superset of a dominating set is dominating, so the set of $k$ with $q_k>0$ is an interval $\{k_0,\dots,n\}$ (empty only for $n=0$, where there is nothing to prove). For $1\le k\le n-1$: if $q_k=0$ then $q_{k-1}=0$ and the inequality $q_k^2\ge q_{k-1}q_{k+1}$ holds; if $q_k>0$ then $q_{k+1}>0$ and the inequality is equivalent to $R_k\le R_{k+1}$. Moreover $R_1=q_0/q_1=0$ when $q_1>0$, since $n\ge 1$. Theorem~\ref{thm:main} therefore follows from:
+
+\begin{lemma}\label{lem:reduce}
+For $2\le k\le n-1$ with $q_k>0$ we have $R_k\le R_{k+1}$.
+\end{lemma}
+
+The cases $k=1$ are covered by $R_1=0$. We prove Lemma~\ref{lem:reduce} for cycles in Section~\ref{sec:cycles} and for paths in Section~\ref{sec:paths}.
+
+\section{Cycles}\label{sec:cycles}
+
+For $\ell=1$ the generating functions corresponding to the encodings below are due to Arocha and Llano \cite{AL}. Let $G=C_n$ with vertices $\mathbb Z/n\mathbb Z$, $n\ge 1$. For a nonempty set $S$ and a marked vertex $x\in S$, list the elements of $S$ clockwise starting at $x$ and let $g_1,\dots,g_k\ge1$ be the clockwise distances between consecutive elements, the last one returning to $x$; then $g_1+\dots+g_k=n$, and for $k=1$ the single gap is $g_1=n$.
+
+A vertex strictly inside a gap of length $g$ at clockwise distances $j$ and $g-j$ from the two ends has distance $\min(j,g-j)$ to $S$ in $C_n$, since every walk from it to another element of $S$ passes through an end of the gap. Hence $S$ is dominating in $C_n^\ell$ if and only if $\lfloor g_i/2\rfloor\le\ell$, that is $g_i\le r$, for all $i$. The map $(S,x)\mapsto(x,g_1,\dots,g_k)$ is a bijection from marked $k$-sets to pairs consisting of a vertex and a composition of $n$ into $k$ positive parts. So if $S$ is a uniformly random dominating $k$-set and $x$ a uniform element of $S$, then $(g_1,\dots,g_k)$ is uniformly distributed on
+\[
+\mathcal C_k=\{(g_1,\dots,g_k)\in\{1,\dots,r\}^k:\ g_1+\dots+g_k=n\}.
+\]
+For $k\ge 2$, deleting $x$ merges the gaps $g_k$ and $g_1$ into one gap and leaves the others unchanged, so $S\setminus\{x\}$ is dominating if and only if $g_k+g_1\le r$. The uniform distribution on $\mathcal C_k$ is invariant under permutations of the coordinates, so $R_k=\Prob(g_1+g_2\le r)$. Let $w=\one_{[1,r]}*\one_{[1,r]}$ and $a_k=\one_{[1,r]}^{*(k-2)}$. The number of elements of $\mathcal C_k$ with $g_1+g_2=s$ is $w(s)a_k(n-s)$, so
+\[
+R_k=\frac{\sum_{s\le r}w(s)a_k(n-s)}{\sum_sw(s)a_k(n-s)},
+\]
+and the denominators are $|\mathcal C_k|>0$ and $|\mathcal C_{k+1}|>0$ when $q_k,q_{k+1}>0$. Since $a_{k+1}=a_k*\one_{[1,r]}$ and $a_k$ is proper (Lemma~\ref{lem:conv}), Lemma~\ref{lem:compare} with $T=n$ and $h=r$ gives $R_{k+1}\ge R_k$. This proves Lemma~\ref{lem:reduce} for cycles.
+
+\section{Paths}\label{sec:paths}
+
+Let $G=P_n$ with vertices $0,\dots,n-1$, and let $S=\{s_1<\dots<s_k\}$ with $k\ge1$. Put $E_L=s_1$, $E_R=n-1-s_k$ and $d_i=s_{i+1}-s_i$ for $1\le i\le k-1$. By the same distance computation, $S$ is dominating in $P_n^\ell$ if and only if
+\[
+E_L,E_R\in\{0,\dots,\ell\}\quad\text{and}\quad d_1,\dots,d_{k-1}\in\{1,\dots,r\},
+\]
+and $E_L+d_1+\dots+d_{k-1}+E_R=n-1$. The map $S\mapsto(E_L,d_1,\dots,d_{k-1},E_R)$ is a bijection from dominating $k$-sets onto the set $\mathcal P_k$ of integer vectors satisfying these conditions. A uniformly random dominating $k$-set therefore gives a uniformly random element of $\mathcal P_k$, and this distribution is invariant under reversal $(E_L,d_1,\dots,d_{k-1},E_R)\mapsto(E_R,d_{k-1},\dots,d_1,E_L)$ and under permutations of $d_1,\dots,d_{k-1}$.
+
+For $k\ge2$ deleting $s_1$ keeps $S$ dominating if and only if $E_L+d_1\le\ell$, and deleting $s_k$ if and only if $d_{k-1}+E_R\le\ell$; for $k\ge3$ deleting $s_{i+1}$ with $1\le i\le k-2$ keeps $S$ dominating if and only if $d_i+d_{i+1}\le r$. Let
+\[
+B_k=\Prob(E_L+d_1\le\ell)\quad(k\ge2),\qquad A_k=\Prob(d_1+d_2\le r)\quad(k\ge3),
+\]
+for a uniform element of $\mathcal P_k$, defined when $\mathcal P_k\ne\emptyset$, that is when $q_k>0$. By the symmetries above the deletion of either end has probability $B_k$ and the deletion of each interior element has probability $A_k$, so
+\[
+R_2=B_2,\qquad R_k=\frac{(k-2)A_k+2B_k}{k}\quad(k\ge3).
+\]
+
+\begin{lemma}\label{lem:AB}
+Let $q_k,q_{k+1}>0$. Then $B_k\le B_{k+1}$ for $k\ge 2$, and $A_k\le A_{k+1}$ for $k\ge3$.
+\end{lemma}
+
+\begin{proof}
+The number of elements of $\mathcal P_k$ with $E_L+d_1=s$ is $w_B(s)\,b_k(n-1-s)$, where $w_B=\one_{[0,\ell]}*\one_{[1,r]}$ and $b_k=\one_{[0,\ell]}*\one_{[1,r]}^{*(k-2)}$ accounts for $E_R$ and $d_2,\dots,d_{k-1}$. Similarly the number with $d_1+d_2=s$ is $w_A(s)\,a_k(n-1-s)$ with $w_A=\one_{[1,r]}^{*2}$ and $a_k=\one_{[0,\ell]}^{*2}*\one_{[1,r]}^{*(k-3)}$. In both cases passing from $k$ to $k+1$ convolves the remainder with $\one_{[1,r]}$ and keeps the weight, the remainders are proper by Lemma~\ref{lem:conv}, and the totals are $|\mathcal P_k|,|\mathcal P_{k+1}|>0$. Lemma~\ref{lem:compare} with $T=n-1$ and $h=\ell$, respectively $h=r$, gives the claims.
+\end{proof}
+
+\begin{lemma}\label{lem:AgeB}
+If $k\ge3$ and $q_k>0$, then $A_k\ge B_k$.
+\end{lemma}
+
+\begin{proof}
+Condition on all coordinates of a uniform element of $\mathcal P_k$ other than $(E_L,d_1,d_2)$; this fixes $\tau=E_L+d_1+d_2$, and $(E_L,d_1,d_2)$ is then uniform on the triples with $E_L\in[0,\ell]$, $d_1,d_2\in[1,r]$ and sum $\tau$. Put $x=\ell-E_L\in[0,\ell]$, $y=r-d_2\in[0,r-1]$ and $c=r+\ell-\tau$. Then $d_1=x+y-c$, the event $E_L+d_1\le\ell$ is $y\le c$, and the event $d_1+d_2\le r$ is $x\le c$. On a triple with $y\le c<x$ we have $0\le y<x\le\ell\le r-1$, so exchanging $x$ and $y$ gives a triple with $x\in[0,\ell]$, $y\in[0,r-1]$ and the same $d_1$, on which $x\le c<y$. This exchange is injective, so among the triples with sum $\tau$ at least as many satisfy $x\le c$ as satisfy $y\le c$. Averaging over the conditioning gives $A_k\ge B_k$.
+\end{proof}
+
+\begin{proof}[Proof of Lemma~\ref{lem:reduce} for paths]
+Let $q_k,q_{k+1}>0$. If $k=2$, then $R_3=\tfrac13A_3+\tfrac23B_3\ge B_3\ge B_2=R_2$ by Lemmas~\ref{lem:AgeB} and~\ref{lem:AB}. If $k\ge3$, put $\lambda_k=(k-2)/k$, so that $R_k=\lambda_kA_k+(1-\lambda_k)B_k$ and $\lambda_{k+1}\ge\lambda_k$. By Lemma~\ref{lem:AB} and then Lemma~\ref{lem:AgeB},
+\[
+R_{k+1}\ge\lambda_{k+1}A_k+(1-\lambda_{k+1})B_k=R_k+(\lambda_{k+1}-\lambda_k)(A_k-B_k)\ge R_k. \qedhere
+\]
+\end{proof}
+
+This completes the proof of Theorem~\ref{thm:main}.
+
+\section{Verification and status}
+
+The proof above is complete and does not depend on computation. As corroboration only, exact independent computations confirm the conclusion of Theorem~\ref{thm:main} for $n\le 90$ and $\ell\le 11$, and confirm the intermediate statements (the formula for $R_k$, Lemmas~\ref{lem:AB} and~\ref{lem:AgeB}, and the monotonicity of $R_k$) on further ranges; Galvin and Zhang had verified the conjecture for $n,\ell\le500$ \cite{GZ}. The proof has not been formally verified or refereed. The ingredients are standard; the double count in Section~3, the composition encoding and the deletion-swap comparison of Lemma~\ref{lem:AgeB} are elementary. The published version of \cite{GZ} cites a personal communication of J.~Zheng and X.~Qin on the ultra-log-concavity of these sequences; we have not seen that work, and the present argument was obtained independently of it.
+
+\begin{thebibliography}{99}
+\bibitem{AP}
+S.~Alikhani and Y.-H. Peng, \emph{Introduction to domination polynomial of a graph}, Ars Combin.\ \textbf{114} (2014), 257--266.
+\bibitem{AL}
+J.~L. Arocha and B.~Llano, \emph{The number of dominating $k$-sets of paths, cycles and wheels}, preprint (2016), \href{https://arxiv.org/abs/1601.01268}{arXiv:1601.01268}.
+\bibitem{BB}
+I.~Beaton and J.~I. Brown, \emph{On the unimodality of domination polynomials}, Graphs Combin.\ \textbf{38}(3) (2022), Paper No.~90, \href{https://doi.org/10.1007/s00373-022-02487-x}{doi:10.1007/s00373-022-02487-x}.
+\bibitem{Efron}
+B.~Efron, \emph{Increasing properties of P\'olya frequency functions}, Ann.\ Math.\ Statist.\ \textbf{36} (1965), 272--279.
+\bibitem{GZ}
+D.~Galvin and Y.~Zhang, \emph{The domination polynomial of powers of paths and cycles}, Discrete Math.\ \textbf{350}(3) (2027), Paper No.~115520, \href{https://doi.org/10.1016/j.disc.2026.115520}{doi:10.1016/j.disc.2026.115520}; preprint \href{https://arxiv.org/abs/2408.12731}{arXiv:2408.12731}.
+\bibitem{Hoggar}
+S.~G. Hoggar, \emph{Chromatic polynomials and logarithmic concavity}, J.\ Combin.\ Theory Ser.~B \textbf{16} (1974), 248--254, \href{https://doi.org/10.1016/0095-8956(74)90071-9}{doi:10.1016/0095-8956(74)90071-9}.
+\bibitem{Karlin}
+S.~Karlin, \emph{Total Positivity, Vol.~I}, Stanford University Press, Stanford, 1968.
+\bibitem{SS}
+M.~Shaked and J.~G. Shanthikumar, \emph{Stochastic Orders}, Springer, New York, 2007.
+\bibitem{Stanley}
+R.~P. Stanley, \emph{Log-concave and unimodal sequences in algebra, combinatorics, and geometry}, Ann.\ New York Acad.\ Sci.\ \textbf{576} (1989), 500--535, \href{https://doi.org/10.1111/j.1749-6632.1989.tb16434.x}{doi:10.1111/j.1749-6632.1989.tb16434.x}.
+\end{thebibliography}
+
+\end{document}
