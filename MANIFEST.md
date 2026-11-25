@@ -43,3 +43,4 @@ Every tracked file except `SHA256SUMS.txt` (which hashes all of them).
 - `visualization/domination-explorer.zip` — Offline interactive explorer
 - `visualization/domination.gif` — Rotating 3D figure
 - `visualization/index.html`
+- `release/RELEASE_NOTES_v1.0.0.md`

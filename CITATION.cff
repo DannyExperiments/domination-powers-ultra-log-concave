@@ -3,6 +3,7 @@ message: "If you use this research release, cite it using the metadata below."
 title: "Ultra log-concavity of the domination polynomials of powers of paths and cycles"
 type: software
 version: 1.0.0
+date-released: 2026-11-26
 repository-code: "https://github.com/DannyExperiments/domination-powers-ultra-log-concave"
 authors:
   - name: "DannyExperiments"
