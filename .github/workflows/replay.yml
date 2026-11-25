@@ -1,4 +1,4 @@
-name: Replay corroborating computation
+name: Replay exact computations
 
 on:
   push:
