@@ -1,0 +1,30 @@
+{
+  "title": "Ultra log-concavity of the domination polynomials of powers of paths and cycles",
+  "upload_type": "software",
+  "version": "1.0.1",
+  "creators": [
+    {
+      "name": "DannyExperiments"
+    }
+  ],
+  "description": "<p>For all n ≥ 0 and ℓ ≥ 1, the number of dominating k-sets of the ℓ-th power of a path or cycle on n vertices, divided by C(n,k), is log-concave in k. This is an independent, self-contained proof of the conjecture of D. Galvin and Y. Zhang, <i>The domination polynomial of powers of paths and cycles</i>, Discrete Math. 350(3) (2027) 115520, Conjecture 1.7 (arXiv:2408.12731, Conjecture 1.8).</p><p>Priority: not a first solution. Galvin and Zhang report (Section 1 of the published paper) that Zheng and Qin proposed an affirmative resolution by a different approach, cited as a personal communication; that work is not public. As far as we know this is the first publicly available proof.</p><p>Contents: four-page manuscript (PDF, TeX), proof outline, corroborating exact computations with a positive control, audit summaries, interactive 3D explorer. Version 1.0.1 adds only this archive metadata to the reviewed Version 1.0.0.</p><p>Authorship and AI disclosure: DannyExperiments directed the investigation and required independent audits and a literature check. Astra 6.2 (OpenAI) found the proof. Claude Opus 5.5 (Anthropic) audited the proof, ran three independent mathematical audits and three literature and priority searches, wrote the verification code, and prepared the manuscript and repository. No AI system is listed as an author. The work has not undergone human specialist peer review and is not formally verified.</p>",
+  "keywords": [
+    "domination polynomial",
+    "ultra log-concavity",
+    "graph powers",
+    "bounded compositions"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/DannyExperiments/domination-powers-ultra-log-concave/releases/tag/v1.0.0",
+      "relation": "isNewVersionOf",
+      "resource_type": "software"
+    },
+    {
+      "identifier": "https://github.com/DannyExperiments/domination-powers-ultra-log-concave",
+      "relation": "isSupplementTo",
+      "resource_type": "software"
+    }
+  ],
+  "notes": "Version 1.0.1 is identical to Version 1.0.0 except for this archive metadata file (.zenodo.json) and the release bookkeeping that records it. The mathematics, manuscript, code and logs are unchanged."
+}
