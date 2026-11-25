@@ -1,0 +1,6 @@
+127cdf1d44739ec44f20cddb74bf5ac11be53ee8fc1d1e3bcc1768d35db0fb92  CITATION.cff
+2950788d2fe494ff326e84fc1b0ae1bb839831449889ef5d0a46de16a3d41a60  SHA256SUMS.txt
+9ae6590a1eae93df77007d7480f39b9433bebede73e4be8aaef45ef933b4e284  domination-powers-ultra-log-concave-public-evidence-v1.0.1.zip
+bdf046c37e5d53c8b334fd8ee64f4ddf81f979fd60b7dddf2cbfaba44860f203  domination-powers-ultra-log-concave-v1.0.1.pdf
+ec39f7f87921483ae302c7efd65e19fff1409a027915b8b95a2ed07c8ba8cccf  domination-powers-ultra-log-concave-v1.0.1.tex
+cfbe615a92e538f12cdc836ab3f31094bfe6daba91143c7458d541c064924d37  references.bib

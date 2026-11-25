@@ -3,6 +3,7 @@
 [![Verify public candidate](https://github.com/DannyExperiments/domination-powers-ultra-log-concave/actions/workflows/verify.yml/badge.svg?branch=main)](https://github.com/DannyExperiments/domination-powers-ultra-log-concave/actions/workflows/verify.yml)
 [![Replay exact computations](https://github.com/DannyExperiments/domination-powers-ultra-log-concave/actions/workflows/replay.yml/badge.svg?branch=main)](https://github.com/DannyExperiments/domination-powers-ultra-log-concave/actions/workflows/replay.yml)
 [![PDF build](https://github.com/DannyExperiments/domination-powers-ultra-log-concave/actions/workflows/pdf.yml/badge.svg?branch=main)](https://github.com/DannyExperiments/domination-powers-ultra-log-concave/actions/workflows/pdf.yml)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24544624.svg)](https://doi.org/10.5281/zenodo.24544624)
 
 **Answer: yes.** For all n ≥ 0 and ℓ ≥ 1, the number of dominating k-sets of the ℓ-th power of a path or a cycle, divided by C(n,k), is log-concave in k. This is an independent, self-contained proof of the conjecture of Galvin and Zhang. Galvin and Zhang report that Zheng and Qin earlier proposed a resolution by a different approach (personal communication). Their work is not public.
 
@@ -52,7 +53,7 @@ Download [`visualization/domination-explorer.zip`](visualization/domination-expl
 
 ## Citation
 
-Not yet archived. See [`CITATION.cff`](CITATION.cff).
+Version 1.0.1 is archived at Zenodo: version DOI [10.5281/zenodo.24544624](https://doi.org/10.5281/zenodo.24544624), concept DOI for all versions [10.5281/zenodo.24544623](https://doi.org/10.5281/zenodo.24544623). Version 1.0.1 is the reviewed Version 1.0.0 plus archive metadata only; the mathematics, manuscript, code and logs are unchanged. The immutable GitHub releases are [v1.0.0](https://github.com/DannyExperiments/domination-powers-ultra-log-concave/releases/tag/v1.0.0) and [v1.0.1](https://github.com/DannyExperiments/domination-powers-ultra-log-concave/releases/tag/v1.0.1). See [`CITATION.cff`](CITATION.cff).
 
 ## Authorship and AI disclosure
 

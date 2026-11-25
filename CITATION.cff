@@ -4,6 +4,15 @@ title: "Ultra log-concavity of the domination polynomials of powers of paths and
 type: software
 version: 1.0.1
 date-released: 2026-11-26
+doi: "10.5281/zenodo.24544624"
+url: "https://doi.org/10.5281/zenodo.24544624"
+identifiers:
+  - type: doi
+    value: "10.5281/zenodo.24544624"
+    description: "The version DOI for the Version 1.0.1 archive release."
+  - type: doi
+    value: "10.5281/zenodo.24544623"
+    description: "The concept DOI for all versions of this work."
 repository-code: "https://github.com/DannyExperiments/domination-powers-ultra-log-concave"
 authors:
   - name: "DannyExperiments"
@@ -12,3 +21,13 @@ keywords:
   - ultra log-concavity
   - graph powers
   - bounded compositions
+preferred-citation:
+  type: software
+  title: "Ultra log-concavity of the domination polynomials of powers of paths and cycles"
+  authors:
+    - name: "DannyExperiments"
+  version: 1.0.1
+  date-released: 2026-11-26
+  doi: "10.5281/zenodo.24544624"
+  url: "https://doi.org/10.5281/zenodo.24544624"
+  repository-code: "https://github.com/DannyExperiments/domination-powers-ultra-log-concave"
