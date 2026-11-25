@@ -22,7 +22,7 @@
 \begin{abstract}
 For a graph $H$ on $n$ vertices let $\gamma_k(H)$ be the number of dominating sets of $H$ of size $k$.
 Galvin and Zhang conjectured that for every $n\ge 0$ and $\ell\ge 1$ the sequences $\gamma_k(P_n^\ell)/\binom nk$ and $\gamma_k(C_n^\ell)/\binom nk$ are log-concave, where $G^\ell$ denotes the $\ell$-th power of $G$.
-We prove this conjecture.
+We give a self-contained proof of this conjecture; Galvin and Zhang report that Zheng and Qin have proposed an affirmative resolution by a different approach.
 The ratio of consecutive terms is the probability that a dominating set of size $k$ remains dominating after a uniformly random member is deleted, and we show that this probability is nondecreasing in $k$.
 The proof writes dominating sets as compositions with bounded parts and compares sums of two parts by a likelihood-ratio argument for log-concave sequences.
 \end{abstract}
@@ -33,13 +33,13 @@ The proof writes dominating sets as compositions with bounded parts and compares
 
 A set $S$ of vertices of a graph $H$ is \emph{dominating} if every vertex of $H$ lies in $S$ or is adjacent to a vertex of $S$. Let $\gamma_k(H)$ denote the number of dominating sets of size $k$. Alikhani and Peng conjectured that $(\gamma_k(H))_k$ is unimodal for every graph $H$ \cite{AP}; this is open in general, and the sequence need not be log-concave \cite{BB}. Beaton and Brown proved unimodality for paths and cycles \cite{BB}, and Galvin and Zhang extended this to all powers of paths and cycles \cite[Theorem~1.4]{GZ}. Here $G^\ell$ is the graph on $V(G)$ in which distinct vertices are adjacent when their distance in $G$ is at most $\ell$, and $P_n$ and $C_n$ are the path and the cycle on $n$ vertices.
 
-A sequence $(a_k)_{k=0}^n$ of nonnegative reals is \emph{log-concave} if $a_k^2\ge a_{k-1}a_{k+1}$ for $1\le k\le n-1$, and \emph{ultra log-concave} if $(a_k/\binom nk)_{k=0}^n$ is log-concave. Galvin and Zhang observed that the domination sequences of powers of paths and cycles appear to be log-concave, verified this and the stronger property below for all $n,\ell\le 500$, and made the following conjecture \cite[Conjecture~1.8]{GZ}.
+A sequence $(a_k)_{k=0}^n$ of nonnegative reals is \emph{log-concave} if $a_k^2\ge a_{k-1}a_{k+1}$ for $1\le k\le n-1$, and \emph{ultra log-concave} if $(a_k/\binom nk)_{k=0}^n$ is log-concave. Galvin and Zhang observed that the domination sequences of powers of paths and cycles appear to be log-concave, verified this and the stronger property below for all $n,\ell\le 500$, and made the following conjecture (Conjecture~1.8 in the arXiv version of \cite{GZ}, Conjecture~1.7 in the published version).
 
 \begin{conjecture}[Galvin--Zhang]\label{conj}
 For all $n\ge 0$ and $\ell\ge 1$, both $(\gamma_k(P_n^\ell))_{k\ge0}$ and $(\gamma_k(C_n^\ell))_{k\ge0}$ are ultra log-concave.
 \end{conjecture}
 
-We prove the conjecture.
+Galvin and Zhang report that, while an earlier version of their paper was under review, Zheng and Qin proposed an affirmative resolution of the conjecture using a different approach \cite[Section~1]{GZ}; that work has not appeared. We give an independent, self-contained proof.
 
 \begin{theorem}\label{thm:main}
 Let $n\ge 0$, $\ell\ge 1$ and $G\in\{P_n,C_n\}$, and put $q_k=\gamma_k(G^\ell)/\binom nk$ for $0\le k\le n$. Then $q_k^2\ge q_{k-1}q_{k+1}$ for $1\le k\le n-1$.
@@ -164,7 +164,7 @@ This completes the proof of Theorem~\ref{thm:main}.
 
 \section{Verification and status}
 
-The proof above is complete and does not depend on computation. As corroboration only, exact independent computations confirm the conclusion of Theorem~\ref{thm:main} for $n\le 90$ and $\ell\le 11$, and confirm the intermediate statements (the formula for $R_k$, Lemmas~\ref{lem:AB} and~\ref{lem:AgeB}, and the monotonicity of $R_k$) on further ranges; Galvin and Zhang had verified the conjecture for $n,\ell\le500$ \cite{GZ}. The proof has not been formally verified or refereed. The ingredients are standard; the double count in Section~3, the composition encoding and the deletion-swap comparison of Lemma~\ref{lem:AgeB} are elementary. The published version of \cite{GZ} cites a personal communication of J.~Zheng and X.~Qin on the ultra-log-concavity of these sequences; we have not seen that work, and the present argument was obtained independently of it.
+The proof above is complete and does not depend on computation. As corroboration only, exact independent computations confirm the conclusion of Theorem~\ref{thm:main} for $n\le 90$ and $\ell\le 11$, and confirm the intermediate statements (the formula for $R_k$, Lemmas~\ref{lem:AB} and~\ref{lem:AgeB}, and the monotonicity of $R_k$) on further ranges; Galvin and Zhang had verified the conjecture for $n,\ell\le500$ \cite{GZ}. The proof has not been formally verified or refereed. The ingredients are standard; the double count in Section~3, the composition encoding and the deletion-swap comparison of Lemma~\ref{lem:AgeB} are elementary. An affirmative resolution by J.~Zheng and X.~Qin is reported in \cite[Section~1]{GZ} as a personal communication; we have not seen that work, and the present argument was obtained independently of it.
 
 \begin{thebibliography}{99}
 \bibitem{AP}
